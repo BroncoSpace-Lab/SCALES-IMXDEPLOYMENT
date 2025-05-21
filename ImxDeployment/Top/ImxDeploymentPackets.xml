@@ -1,0 +1,81 @@
+<packets name="ImxDeploymentPackets" namespace="ImxDeployment" size="111">
+
+    <import_topology>ImxDeployment/Top/ImxDeploymentTopologyAppAi.xml</import_topology>
+
+    <packet name="CDH" id="1" level="1">
+        <channel name="imx_cmdDisp.CommandsDispatched"/>
+        <channel name="imx_rateGroup1.RgMaxTime"/>
+        <channel name="imx_rateGroup2.RgMaxTime"/>
+        <channel name="imx_rateGroup3.RgMaxTime"/>
+        <channel name="imx_cmdSeq.CS_LoadCommands"/>
+        <channel name="imx_cmdSeq.CS_CancelCommands"/>
+        <channel name="imx_cmdSeq.CS_CommandsExecuted"/>
+        <channel name="imx_cmdSeq.CS_SequencesCompleted"/>
+        <channel name="imx_fileUplink.FilesReceived"/>
+        <channel name="imx_fileUplink.PacketsReceived"/>
+        <channel name="imx_bufferManager.TotalBuffs"/>
+        <channel name="imx_bufferManager.CurrBuffs"/>
+        <channel name="imx_bufferManager.HiBuffs"/>
+        <channel name="imx_fileDownlink.FilesSent"/>
+        <channel name="imx_fileDownlink.PacketsSent"/>
+        <channel name="imx_fileManager.CommandsExecuted"/>
+        <!-- Uncomment to use Svc::TlmPacketizer -->
+        <!--channel name="tlmSend.SendLevel"/-->
+    </packet>
+
+    <packet name="CDHErrors" id="2" level="1">
+        <channel name="imx_rateGroup1.RgCycleSlips"/>
+        <channel name="imx_rateGroup2.RgCycleSlips"/>
+        <channel name="imx_rateGroup3.RgCycleSlips"/>
+        <channel name="imx_cmdSeq.CS_Errors"/>
+        <channel name="imx_fileUplink.Warnings"/>
+        <channel name="imx_fileDownlink.Warnings"/>
+        <channel name="imx_health.PingLateWarnings"/>
+        <channel name="imx_fileManager.Errors"/>
+        <channel name="imx_bufferManager.NoBuffs"/>
+        <channel name="imx_bufferManager.EmptyBuffs"/>
+        <channel name="imx_fileManager.Errors"/>
+    </packet>
+
+    <packet name="DriveTlm" id="3" level="1">
+        <channel name="imx_blockDrv.BD_Cycles"/>
+    </packet>
+
+    <packet name="Comms" id="4" level="1">
+        <channel name="imx_comQueue.comQueueDepth"/>
+        <channel name="imx_comQueue.buffQueueDepth"/>
+    </packet>
+
+    <packet name="SystemRes1" id="5" level="2">
+        <channel name="imx_systemResources.MEMORY_TOTAL"/>
+        <channel name="imx_systemResources.MEMORY_USED"/>
+        <channel name="imx_systemResources.NON_VOLATILE_TOTAL"/>
+        <channel name="imx_systemResources.NON_VOLATILE_FREE"/>
+    </packet>
+
+    <packet name="SystemRes2" id="7" level="2">
+        <channel name="imx_systemResources.CPU"/>
+        <channel name="imx_systemResources.CPU_00"/>
+        <channel name="imx_systemResources.CPU_01"/>
+        <channel name="imx_systemResources.CPU_02"/>
+        <channel name="imx_systemResources.CPU_03"/>
+        <channel name="imx_systemResources.CPU_04"/>
+        <channel name="imx_systemResources.CPU_05"/>
+        <channel name="imx_systemResources.CPU_06"/>
+        <channel name="imx_systemResources.CPU_07"/>
+        <channel name="imx_systemResources.CPU_08"/>
+        <channel name="imx_systemResources.CPU_09"/>
+        <channel name="imx_systemResources.CPU_10"/>
+        <channel name="imx_systemResources.CPU_11"/>
+        <channel name="imx_systemResources.CPU_12"/>
+        <channel name="imx_systemResources.CPU_13"/>
+        <channel name="imx_systemResources.CPU_14"/>
+        <channel name="imx_systemResources.CPU_15"/>
+    </packet>
+
+    <!-- Ignored packets -->
+
+    <ignore>
+        <channel name="imx_cmdDisp.CommandErrors"/>
+    </ignore>
+</packets>
