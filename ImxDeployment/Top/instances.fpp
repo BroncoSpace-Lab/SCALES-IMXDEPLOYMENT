@@ -117,7 +117,7 @@ module ImxDeployment {
 
   instance imx_deframer: Svc.Deframer base id 0x4900
 
-  instance imx_systemResources: Svc.SystemResources base id 0x4A00
+  # instance imx_systemResources: Svc.SystemResources base id 0x4A00
 
   instance imx_comStub: Svc.ComStub base id 0x4B00
 

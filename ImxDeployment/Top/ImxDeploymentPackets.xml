@@ -46,7 +46,7 @@
         <channel name="imx_comQueue.buffQueueDepth"/>
     </packet>
 
-    <packet name="SystemRes1" id="5" level="2">
+    <!-- <packet name="SystemRes1" id="5" level="2">
         <channel name="imx_systemResources.MEMORY_TOTAL"/>
         <channel name="imx_systemResources.MEMORY_USED"/>
         <channel name="imx_systemResources.NON_VOLATILE_TOTAL"/>
@@ -71,7 +71,7 @@
         <channel name="imx_systemResources.CPU_13"/>
         <channel name="imx_systemResources.CPU_14"/>
         <channel name="imx_systemResources.CPU_15"/>
-    </packet>
+    </packet> -->
 
     <!-- Ignored packets -->
 

@@ -40,7 +40,7 @@ module ImxDeployment {
     instance imx_rateGroup3
     instance imx_rateGroupDriver
     instance imx_textLogger
-    instance imx_systemResources
+    # instance imx_systemResources
 
     instance imx_hubComDriver
     instance imx_hub
@@ -105,7 +105,7 @@ module ImxDeployment {
       imx_rateGroupDriver.CycleOut[Ports_RateGroups.rateGroup1] -> imx_rateGroup1.CycleIn
       imx_rateGroup1.RateGroupMemberOut[0] -> imx_tlmSend.Run
       imx_rateGroup1.RateGroupMemberOut[1] -> imx_fileDownlink.Run
-      imx_rateGroup1.RateGroupMemberOut[2] -> imx_systemResources.run
+      # imx_rateGroup1.RateGroupMemberOut[2] -> imx_systemResources.run
 
       # Rate group 2
       imx_rateGroupDriver.CycleOut[Ports_RateGroups.rateGroup2] -> imx_rateGroup2.CycleIn
