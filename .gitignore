@@ -10,6 +10,7 @@ build-fprime-*
 # Misc
 /venv/
 /fprime-venv/
+.fprime-venv
 /.idea/
 /.vscode/
 .DS_Store
